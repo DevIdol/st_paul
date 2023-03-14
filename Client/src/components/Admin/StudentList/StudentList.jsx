@@ -14,7 +14,6 @@ const StudentList = () => {
   useEffect(() => {
     dispatch(getStudents(grade));
   }, [dispatch, grade]);
-  console.log(students);
 
   return (
     <SideBarRight>

@@ -113,6 +113,7 @@ const StudentForm = ({
           <Input
             type="number"
             name="phNo"
+            maxlength="12"
             value={value.phNo}
             onChange={onChange}
             placeholder="Phone Number"

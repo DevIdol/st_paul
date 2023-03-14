@@ -9,6 +9,7 @@ const Input = ({
   value,
   placeholder,
   className,
+  maxlength
 }) => {
   return (
     <input
@@ -19,6 +20,7 @@ const Input = ({
       name={name}
       value={value}
       placeholder={placeholder}
+      maxLength={maxlength}
     />
   );
 };

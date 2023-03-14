@@ -6,9 +6,9 @@ import StudentModel from "../Models/StudentModel.js";
 function calculateRemark(mark) {
     if (mark >= 85 && mark <= 100) {
         return "A";
-    } else if (mark >= 67 && mark <= 84) {
+    } else if (mark >= 65 && mark <= 84) {
         return "B";
-    } else if (mark >= 45 && mark <= 66) {
+    } else if (mark >= 45 && mark <= 64) {
         return "C";
     } else {
         return "D";

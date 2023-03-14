@@ -2,8 +2,6 @@ import passport from "passport";
 import { createError } from "../Utils/CreateError.js";
 import jwt from "jsonwebtoken";
 
-
-
 //login user
 export const LoginUser = async (req, res, next) => {
     passport.authenticate("login", async (err, user, info) => {

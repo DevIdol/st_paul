@@ -195,6 +195,11 @@ export const verifyAdmin = async (
     try {
         const userId = req.params.userId;
         const user = await UserModel.findById(userId);
+        const isAdmin = await UserModel.find({ isAdmin: true })
+        const mainAdmin = isAdmin.shift()
+        if (String(mainAdmin._id) === userId) {
+            return next(createError(403, "This is main admin. You can't change."))
+        }
         if (!user) {
             return next(createError(404, "User Not Found"));
         }
