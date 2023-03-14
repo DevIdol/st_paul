@@ -9,7 +9,6 @@ export const LoginUser = async (req, res, next) => {
     passport.authenticate("login", async (err, user, info) => {
         try {
             req.login(user, { session: false }, async (error) => {
-                console.log(user)
                 if (!user.email || !user.password) {
                     return next(createError(403, "Invalid email or password....."))
                 }

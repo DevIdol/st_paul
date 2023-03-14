@@ -139,7 +139,6 @@ export const updateUser = async (req, res, next) => {
             })
         }
     } catch (error) {
-        console.log(error)
         next(createError(500, "Something Went Wrong."));
     }
 }
